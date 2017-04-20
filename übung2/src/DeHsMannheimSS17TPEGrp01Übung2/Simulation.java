@@ -55,7 +55,7 @@ public class Simulation {
 		p2.addVmg(aktiefonds3);
 		p2.addVmg(rentenpapier1);
 		p2.addVmg(festgeld2);
-		p2.listVGM2();
+		p2.listVGM1();
 		System.out.println("die Gesamtsumme beträgt: " + p2.berecheWert() + " cent");
 		try {
 			Thread.sleep(10000);
@@ -93,7 +93,7 @@ public class Simulation {
 		p2.addVmg(aktiefonds3);
 		p2.addVmg(rentenpapier1);
 		p2.addVmg(festgeld2);
-		p2.listVGM2();
+		p2.listVGM1();
 		System.out.println("die Gesamtsumme beträgt: " + p2.berecheWert() + " cent");
 		System.out.println("Zwischensumme " + p2.gewinnVerlustAmEnde());
 		try {
@@ -133,7 +133,7 @@ public class Simulation {
 		p2.addVmg(aktiefonds3);
 		p2.addVmg(rentenpapier1);
 		p2.addVmg(festgeld2);
-		p2.listVGM2();
+		p2.listVGM1();
 		System.out.println("die Gesamtsumme beträgt: " + p2.berecheWert() + " cent");
 		System.out.println("Zwischensumme " + p2.gewinnVerlustAmEnde());
 	}

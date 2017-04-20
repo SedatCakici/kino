@@ -7,9 +7,9 @@ import java.util.ArrayList;
  * @author sedat
  *
  */
-public class Aktiefonds extends Vermögensgegenstand {
+public class Aktiefonds extends Fonds {
 	public Aktiefonds(String name, long kaufpreis, String kaufdatum, long anzahl) {
-		super(name, kaufpreis, kaufdatum, anzahl);
+		super("A.fonds", name, kaufpreis, kaufdatum, anzahl);
 	}
 
 	public ArrayList<Aktie> anSammlungVonAktien = new ArrayList<Aktie>();

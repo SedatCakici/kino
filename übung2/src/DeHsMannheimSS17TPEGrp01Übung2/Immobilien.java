@@ -5,7 +5,7 @@ package DeHsMannheimSS17TPEGrp01Übung2;
  *
  */
 public class Immobilien extends Vermögensgegenstand {
-	private final long konstatanteSenkungDesKaufpreisBisMaxNull = 50000;
+	private final long konstatanteSenkungDesKaufpreisBisMaxNull= kaufpreis/20;
 	protected long zeit = 0;
 	protected long aktuellerPreis = 0;
 	/**
@@ -15,7 +15,7 @@ public class Immobilien extends Vermögensgegenstand {
 	 * @param kaufdatum : wann er erstellt wurde
 	 */
 	public Immobilien(String name, long kaufpreis, String kaufdatum) {
-		super(name, kaufpreis, kaufdatum,1);
+		super("Immo", name, kaufpreis, kaufdatum,1);
 	}
 	/**
 	 * 

@@ -6,9 +6,9 @@ import java.util.ArrayList;
  * @author sedat
  *
  */
-public class Rentenfonds extends Vermögensgegenstand {
+public class Rentenfonds extends Fonds {
 	public Rentenfonds(String name, long kaufpreis, String kaufdatum, long anzahl) {
-		super(name, kaufpreis, kaufdatum, anzahl);
+		super("R.fonds", name, kaufpreis, kaufdatum, anzahl);
 	}
 
 	public ArrayList<Rentenpapier> anSammlungVonAktien = new ArrayList<Rentenpapier>();

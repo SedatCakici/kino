@@ -12,8 +12,6 @@ public class Portfolio {
 	ArrayList<Vermögensgegenstand> vmgs = new ArrayList<Vermögensgegenstand>();
 	protected long summe[] = new long[5];
 	protected byte j = 0;
-	protected String typ1[] = { "Aktie", "Aktie", "A.fonds", "Immo", "F.geld", "Option", "Option", "Option", "Option" };
-	protected String typ2[] = { "Aktie", "Aktie", "Aktie", "Aktie", "A.fonds", "A.fonds", "S.brief", "F.geld" };
 
 	/**
 	 * 
@@ -42,20 +40,13 @@ public class Portfolio {
 	protected void listVGM1() {
 		System.out.println("Typ\t\tName\t\tAnzahl\t\tStückpreis");
 		for (int i = 0; i < vmgs.size(); i++) {
-			System.out.println(typ1[i] + "\t\t" + vmgs.get(i).name + "\t\t" + vmgs.get(i).anzahl + "\t\t"
+			System.out.println(vmgs.get(i).typ + "\t\t" + vmgs.get(i).name + "\t\t" + vmgs.get(i).anzahl + "\t\t"
 					+ vmgs.get(i).aktuellerPreis);
 		}
 	}
 /**
  * @see gibt die Tabelle aus für portfolio 2 
  */
-	protected void listVGM2() {
-		System.out.println("Typ\t\tName\t\tAnzahl\t\tStückpreis");
-		for (int i = 0; i < vmgs.size(); i++) {
-			System.out.println(typ2[i] + "\t\t" + vmgs.get(i).name + "\t\t" + vmgs.get(i).anzahl + "\t\t"
-					+ vmgs.get(i).aktuellerPreis);
-		}
-	}
 
 	/**
 	 * 

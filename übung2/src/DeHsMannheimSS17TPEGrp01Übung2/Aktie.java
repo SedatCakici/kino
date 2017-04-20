@@ -16,7 +16,7 @@ public class Aktie extends Vermögensgegenstand implements Handelbar {
 	 * @param anzahl : wie viel es davon angelegt wurde
 	 */
 	public Aktie(String name, long kaufpreis, String kaufdatum, long anzahl) {
-		super(name, kaufpreis, kaufdatum, anzahl);
+		super("Aktie", name, kaufpreis, kaufdatum, anzahl);
 	}
 
 	/**

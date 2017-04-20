@@ -15,7 +15,7 @@ public long ausübungspreis;
  * @param ausübungspreis : was man dafür einsetzt
  */
 public Option(String name, long kaufpreis, String kaufdatum, long anzahl, long ausübungspreis) {
-    super(name, kaufpreis, kaufdatum,anzahl);
+    super("Option", name, kaufpreis, kaufdatum,anzahl);
     this.ausübungspreis = ausübungspreis;
 }
 

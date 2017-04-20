@@ -17,7 +17,7 @@ public class Festgeld extends Vermögensgegenstand {
 	 * @param kaufdatum : wann es angelegt wurde
 	 */
 	public Festgeld(String name, long kaufpreis, String kaufdatum) {
-		super(name, kaufpreis, kaufdatum, 1);
+		super("F.geld", name, kaufpreis, kaufdatum, 1);
 	}
 
 	/**
