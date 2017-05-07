@@ -1,0 +1,47 @@
+package deHsMannheimSS17Tpe;
+
+public class C3POc extends Robot {
+
+	@Override
+	public int getId() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void triggerPowerSwitch() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isPowerOn() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Exception getLastException() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String speak(int[] zahlen) throws IllegalStateException, MachineException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int[] think(int[] zahlen) throws IllegalStateException, MachineException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

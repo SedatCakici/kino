@@ -1,0 +1,12 @@
+package deHsMannheimSS17Tpe;
+
+public enum RobotType {
+	R2D2, C3PO;
+
+public static void main(String []args){
+	RobotType p = RobotType.C3PO;
+	
+	System.out.println(p.name());
+	
+}
+}

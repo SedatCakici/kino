@@ -1,0 +1,40 @@
+package deHsMannheimSS17Tpe;
+
+public class C3PO extends Robot {
+
+	@Override
+	public int getId() {
+		return 0;
+	}
+
+	@Override
+	public String getName() {
+		return null;
+	}
+
+	@Override
+	public void triggerPowerSwitch() {
+		
+	}
+
+	@Override
+	public boolean isPowerOn() {
+		return false;
+	}
+
+	@Override
+	public Exception getLastException() {
+		return null;
+	}
+
+	@Override
+	public String speak(int[] zahlen) throws IllegalStateException, MachineException {
+		return null;
+	}
+
+	@Override
+	public int[] think(int[] zahlen) throws IllegalStateException, MachineException {
+		return null;
+	}
+
+}

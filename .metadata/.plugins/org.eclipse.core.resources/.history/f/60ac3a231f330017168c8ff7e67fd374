@@ -1,0 +1,11 @@
+package deHsMannheimSS17Tpe;
+
+import java.io.IOException;
+
+public class Bender  {
+	public static void main(String[] args) throws IOException {
+		int i =sedat;
+		int j =1;			
+	}
+	
+}

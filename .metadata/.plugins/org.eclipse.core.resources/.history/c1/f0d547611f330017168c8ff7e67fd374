@@ -1,0 +1,17 @@
+package deHsMannheimSS17Tpe;
+
+import java.io.IOException;
+
+public class Bender  {
+	public static void main(String[] args) {
+		int i;
+		int j =1;			
+		try{			
+			i =sedat;
+		}
+		catch(Exception e){
+			i = 5;
+		}
+	}
+	
+}
