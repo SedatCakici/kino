@@ -2,9 +2,24 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="DeHsMannheimSS17TPEGrp01Übung2.Vermögensgegenstand"/>
 <fullyQualifiedTypeName name="DeHsMannheimSS17TPEGrp01Übung2.Fonds"/>
+<fullyQualifiedTypeName name="java.lang.OutOfMemoryError"/>
+<fullyQualifiedTypeName name="java.lang.Throwable"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
+<fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="deHsMannheimSS17Tpe.R2D2"/>
+<fullyQualifiedTypeName name="deHsMannheimSS17Tpe.C3PO"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="deHsMannheimSS17Tpe.SimpleControl"/>
 <fullyQualifiedTypeName name="deHsMannheimSS17Tpe.SimpleInstructions"/>
 <fullyQualifiedTypeName name="deHsMannheimSS17Tpe.Robot"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="deHsMannheimSS17Tpe.RobotFactory"/>
 <fullyQualifiedTypeName name="deHsMannheimSS17Tpe.RobotType"/>
+<fullyQualifiedTypeName name="deHsMannheimSS17Tpe.MachineException"/>
+<fullyQualifiedTypeName name="deHsMannheimSS17Tpe.RobotMacigValueException"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

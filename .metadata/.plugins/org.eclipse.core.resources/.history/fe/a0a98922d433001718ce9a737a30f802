@@ -1,0 +1,10 @@
+package deHsMannheimSS17Tpe;
+
+public class Main {
+
+	public static void main(String[] args) {
+		R2D2 r1 = new R2D2("Prof. Hummels Robot");
+		C3PO r2 = new C3PO("Herr Kohler Robot");
+	}
+
+}

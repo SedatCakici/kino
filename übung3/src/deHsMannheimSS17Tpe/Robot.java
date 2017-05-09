@@ -1,18 +1,12 @@
 package deHsMannheimSS17Tpe;
 
-public abstract class Robot implements SimpleControl, SimpleInstructions {
+abstract class Robot implements SimpleControl, SimpleInstructions {
 	final String name;
-	final int id;
-	int anAus =0;
-	
-	
+	int id;
+	boolean status = false;
+	int i = 0;
 
-	public Robot(String name, int id) {
+	public Robot(String name) {
 		this.name = name;
-		this.id = id;
-	}
-	
-	public String getRobotName(){
-		return name;
 	}
 }

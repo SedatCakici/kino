@@ -1,5 +1,5 @@
 package deHsMannheimSS17Tpe;
 
-public class Bender {
+protected class Bender {
 
 }

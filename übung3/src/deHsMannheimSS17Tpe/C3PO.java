@@ -2,8 +2,10 @@ package deHsMannheimSS17Tpe;
 
 public class C3PO extends Robot {
 
-	public C3PO(String name, int id) {
-		super(name,(int) (Math.random()*100000)+99999);
+	public C3PO(String name) {
+		super(name);
+	
+		this.id = (int) (Math.random() * 100000) + 99999;
 	}
 
 	@Override
@@ -18,12 +20,17 @@ public class C3PO extends Robot {
 
 	@Override
 	public void triggerPowerSwitch() {
-		
+		i++;
+		if (i % 2 == 0) {
+			status = false;
+			return;
+		}
+		status = true;
 	}
 
 	@Override
 	public boolean isPowerOn() {
-		return false;
+		return status;
 	}
 
 	@Override
@@ -33,12 +40,26 @@ public class C3PO extends Robot {
 
 	@Override
 	public String speak(int[] zahlen) throws IllegalStateException, MachineException {
-		return null;
+		String s = "";
+		for (int i = 0; i < zahlen.length; i++) {
+			s = s + zahlen[i] + ", ";
+		}
+		return s;
 	}
 
 	@Override
 	public int[] think(int[] zahlen) throws IllegalStateException, MachineException {
-		return null;
+		int temp;
+		for (int i = 1; i < zahlen.length; i++) {
+			for (int j = 0; j < zahlen.length - i; j++) {
+				if (zahlen[j] > zahlen[j + 1]) {
+					temp = zahlen[j];
+					zahlen[j] = zahlen[j + 1];
+					zahlen[j + 1] = temp;
+				}
+			}
+		}
+		return zahlen;
 	}
 
 }

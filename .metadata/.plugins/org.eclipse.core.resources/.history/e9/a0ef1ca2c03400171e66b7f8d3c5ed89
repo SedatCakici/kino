@@ -1,0 +1,9 @@
+package deHsMannheimSS17Tpe;
+
+public class RobotMacigValueException extends Exception {
+	private static final long serialVersionUID = 1L;
+
+	public RobotMacigValueException() {
+		System.out.println("die magische Zahl 42 ist aufgetreten");
+	}
+}

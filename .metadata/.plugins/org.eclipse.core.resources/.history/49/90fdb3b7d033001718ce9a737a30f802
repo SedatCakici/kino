@@ -1,0 +1,65 @@
+package deHsMannheimSS17Tpe;
+
+public class R2D2 extends Robot {
+
+	public R2D2(String name) {
+		super(name);
+		this.id = (int) ((Math.random() * 100000) - 1);
+	}
+
+	@Override
+	public int getId() {
+		return id;
+	}
+
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	@Override
+	public void triggerPowerSwitch() {
+		i++;
+		if (i % 2 == 0) {
+			status = false;
+			System.out.println("aus");
+			return;
+		}
+		status = true;
+		System.out.println("an");
+	}
+
+	@Override
+	public boolean isPowerOn() {
+		return status;
+	}
+
+	@Override
+	public Exception getLastException() {
+		return null;
+	}
+
+	@Override
+	public String speak(int[] zahlen) throws IllegalStateException, MachineException {
+		String s = "";
+		for (int i = 0; i <= zahlen.length; i++) {
+			s = "" + zahlen[i];
+		}
+		return s;
+	}
+
+	@Override
+	public int[] think(int[] zahlen) throws IllegalStateException, MachineException {
+		int sortiert[] = new int[20];
+		for (int i = 0; i <= zahlen.length; i++) {
+			sortiert[i] = zahlen[i];
+		}
+		return sortiert;
+	}
+	
+	public static void main(String[] args) {
+		R2D2 r1 = new R2D2("T1");
+		System.out.println(r1.isPowerOn());
+	}
+
+}

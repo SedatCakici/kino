@@ -10,7 +10,7 @@ public interface SimpleInstructions {
 	* @throws IllegalStateException wenn das Ger ̈at in einem ung ̈ultigen Zustand ist
 	* @throws Exception wenn das Array nicht seinen Vorstellungen entspricht
 	*/
-	public String speak(int[] zahlen) throws IllegalStateException, MachineException;
+	public String speak(int[] zahlen) throws IllegalStateException, MachineException, RobotMacigValueException;
 	/**
 	* Sortiert ein Array von Zahlen. Die Reihenfolge h ̈angt von dem Typ des
 	* Ger ̈ats ab.
