@@ -1,0 +1,16 @@
+package deHsMannheimSS17Tpe;
+
+public class Main {
+
+	public static void main(String[] args) throws IllegalStateException, MachineException {
+		RobotFactory rf = new RobotFactory();
+		Robot ben = rf.createRobot(RobotType.Bender);
+		System.out.println(ben.isPowerOn());
+		ben.triggerPowerSwitch();
+		System.out.println(ben.isPowerOn());
+		
+		int[] a = {2,98,65,42,4,0};
+		System.out.println(ben.speak(a));
+	}
+
+}

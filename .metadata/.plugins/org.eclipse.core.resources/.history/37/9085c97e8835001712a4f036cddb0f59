@@ -1,0 +1,12 @@
+package deHsMannheimSS17Tpe;
+
+abstract class Robot implements SimpleControl, SimpleInstructions {
+	final String name;
+	int id;
+	boolean status = false;
+	int i = 0;
+
+	public Robot(String name) {
+		this.name = name;
+	}
+}

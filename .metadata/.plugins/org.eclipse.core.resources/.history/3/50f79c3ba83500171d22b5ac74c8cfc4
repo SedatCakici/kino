@@ -1,0 +1,73 @@
+package deHsMannheimSS17Tpe;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class C3POTest {
+	
+	@Test
+	public void Konstruktortest() {
+		C3PO be = new C3PO("TP3400");
+		String output = be.name;
+		assertEquals("TP3400",output);
+	}
+	
+	@Test
+	public void getNameTest(){
+		C3PO be = new C3PO("TP3400");
+		String output = be.getName();
+		assertEquals("TP3400", output);
+	}
+	
+	@Test
+	public void getIdTest(){
+		C3PO be = new C3PO("TP3400");
+		int output = be.getId();
+		if(output > 100000 && output < 200000){
+			assertTrue(true);
+		}else{
+			assertTrue(false);
+		}
+	}
+	
+	@Test
+	public void triggerPowerSwitchTest(){
+		C3PO be = new C3PO("TP3400");
+		boolean output = be.status; 
+		assertEquals(false, output);
+		
+		be.triggerPowerSwitch();
+		assertEquals(false, output);
+		
+		be.triggerPowerSwitch();
+		assertEquals(false, output);			
+	}
+	
+	@Test
+	public void isPowerOnTest(){
+		C3PO be = new C3PO("TP3400");
+		boolean output = be.isPowerOn();
+		assertEquals(false,output);
+	}
+	
+	@Test
+	public void getLastExceptionTest(){
+		
+	}
+	
+	@Test (expected = RobotMacigValueException.class)
+	public void speakTest() throws IllegalStateException, MachineException{
+		C3PO be = new C3PO("TP3400");
+		int array[] = {2,4,3,98,45};
+		String output = be.speak(array);
+		assertEquals("2,4,3,98,45,", output);
+		
+	}
+	
+	@Test
+	public void thinkTest(){
+		
+	}
+
+}

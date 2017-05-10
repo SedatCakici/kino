@@ -1,6 +1,6 @@
 package deHsMannheimSS17Tpe;
 
-public class RobotMacigValueException extends Exception {
+public class RobotMacigValueException extends MachineException {
 	public RobotMacigValueException(String robotName) {
 		super();
 		getRobotName(robotName);

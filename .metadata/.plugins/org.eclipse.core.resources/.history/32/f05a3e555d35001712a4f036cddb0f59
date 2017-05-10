@@ -1,0 +1,16 @@
+package deHsMannheimSS17Tpe;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class BenderTest {
+
+	@Test
+	public void test() {
+		Bender be = new Bender("TP3400");
+		String output = be.name;
+		assertEquals("TP3400",output);
+	}
+
+}

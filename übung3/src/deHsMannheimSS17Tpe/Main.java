@@ -3,16 +3,20 @@ package deHsMannheimSS17Tpe;
 public class Main {
 
 	public static void main(String[] args) throws IllegalStateException, MachineException {
+		int[] a = { 2, 98, 65, 2, 4, 0 };
 		RobotFactory rf = new RobotFactory();
-		Robot r = rf.createRobot("R2D2");
-		System.out.println(r.isPowerOn());
-		r.triggerPowerSwitch();
-		System.out.println(r.isPowerOn());
-		System.out.println(r.getId());
-		System.out.println(r.getName());
-		
-		int a[] = {2,46,89,42,11};
-		System.out.println(r.speak(a));
+
+		Robot ben = rf.createRobot(RobotType.R2D2);
+		System.out.println("Name des Roboters: " + ben.getName());
+		System.out.println("ID des Roboters: " + ben.id);
+		System.out.println("ist es an? " + ben.isPowerOn());
+		ben.triggerPowerSwitch();
+		System.out.println("ist es an? " + ben.isPowerOn());
+		System.out.println("rede: " + ben.speak(a));
+		System.out.println("denke: " + ben.think(a));
+
+		System.out.println("---------------------------");
+
 	}
 
 }

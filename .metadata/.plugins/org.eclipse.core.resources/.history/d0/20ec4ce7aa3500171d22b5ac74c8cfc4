@@ -1,0 +1,69 @@
+package deHsMannheimSS17Tpe;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class BenderTest {
+
+	@Test
+	public void Konstruktortest() {
+		Bender be = new Bender("TP3400");
+		String output = be.name;
+		assertEquals("TP3400",output);
+	}
+	
+	@Test
+	public void getNameTest(){
+		Bender be = new Bender("TP3400");
+		String output = be.getName();
+		assertEquals("TP3400", output);
+	}
+	
+	@Test
+	public void getIdTest(){
+		Bender be = new Bender("TP3400");
+		int output = be.getId();
+		if(output < 100000 && output > 0){
+			assertTrue(true);
+		}else{
+			assertTrue(false);
+		}	
+	}
+	
+	@Test
+	public void triggerPowerSwitchTest(){
+		Bender be = new Bender("TP3400");
+		boolean output = be.status; 
+		assertEquals(false, output);
+		
+		be.triggerPowerSwitch();
+		assertEquals(false, output);
+		
+		be.triggerPowerSwitch();
+		assertEquals(false, output);			
+	}
+	
+	@Test
+	public void isPowerOnTest(){
+		Bender be = new Bender("TP3400");
+		boolean output = be.isPowerOn();
+		assertEquals(false,output);
+	}
+	
+	@Test
+	public void getLastExceptionTest(){
+		
+	}
+	
+	@Test
+	public void speakTest(){
+		
+	}
+	
+	@Test
+	public void thinkTest(){
+		
+	}
+
+}

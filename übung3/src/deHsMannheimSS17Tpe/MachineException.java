@@ -8,4 +8,9 @@ public class MachineException extends Exception {
 	public MachineException(String msg) {
 		super(msg);
 	}
+	
+	public String getRobotName(){
+		StackTraceElement stack[] = super.getStackTrace();
+		return stack[0].getClassName();
+	}
 }

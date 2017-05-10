@@ -1,0 +1,19 @@
+package deHsMannheimSS17Tpe;
+
+public class Main {
+
+	public static void main(String[] args) throws IllegalStateException, MachineException {
+		RobotFactory rf = new RobotFactory();
+		Robot ben = rf.createRobot(RobotType.C3PO);
+		System.out.println("Name des Roboters: "+ben.getName());
+		System.out.println("ID des Roboters: "+ben.id);
+		System.out.println("ist es an? "+ben.isPowerOn());
+//		ben.triggerPowerSwitch();
+		System.out.println("ist es an? "+ben.isPowerOn());
+
+		int[] a = { 2, 98, 65, 2, 4, 0 };
+		System.out.println("rede: "+ben.speak(a));
+		System.out.println("denke: "+ben.think(a));
+	}
+
+}

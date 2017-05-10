@@ -1,7 +1,7 @@
 package deHsMannheimSS17Tpe;
 
 public enum RobotType {
-	R2D2, C3PO;
+	R2D2, C3PO, Bender;
 	// public enum RobotType {
 	// MAENNLICH, WEIBLICH;
 	//
