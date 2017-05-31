@@ -1,5 +1,0 @@
-package deHsMannheimSS17Tpe;
-
-public enum RobotType {
-R2d2,C3PO
-}

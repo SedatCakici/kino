@@ -1,0 +1,38 @@
+package uebung4;
+
+/**
+ * @author Sedat Cakici
+ */
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class JUnitTest {
+
+	@Test
+	public void testToStringFilm() throws IllegalTimeException {
+		Saal gruenerSaal = new Saal("Gruener Saal", 200);
+		Film spongebob = new Film("Spongebob - Ich bin bereit, jeder Zeit!", "121", Alterbeschrankung.AB_18, new Zeit(15, 00),gruenerSaal);
+		assertEquals("15:00--Spongebob - Ich bin bereit, jeder Zeit!" +" "+ Alterbeschrankung.AB_18 +" "+ "121min", spongebob.toString());
+		
+		Saal blauerSaal = new Saal("Blauer Saal", 250);
+		Film thadeus = new Film("Thadeus - Ich bin Thadeus, Thadeus, deus deus :D", "91", Alterbeschrankung.AB_16, new Zeit("14:00"), blauerSaal);
+		assertEquals("14:00--Thadeus - Ich bin Thadeus, Thadeus, deus deus :D" +" "+ Alterbeschrankung.AB_16 +" "+ "91min", thadeus.toString());
+		
+	}
+	
+	@Test
+	public void testToStringSaal() {
+		Saal kellerloch = new Saal("Kellerloch", 30);
+		assertEquals("SaalKellerloch(30Plaetze", kellerloch.toString());
+	}
+	
+	@Test
+	public void testOhneUhrzeit() throws IllegalTimeException {
+		Saal studio = new Saal("Studio", 150);
+		Film patrick = new Film("Patrick Star - Ein Seestern wächst über sich hinaus","90", Alterbeschrankung.AB_0, new Zeit("17:00"), studio);
+		assertEquals("Patrick Star - Ein Seestern wächst über sich hinaus" +" "+ Alterbeschrankung.AB_0 +" "+ "90min", patrick.ohneUhrzeit());
+	}
+
+}

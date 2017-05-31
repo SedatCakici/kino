@@ -1,0 +1,20 @@
+package deHsMannheimSS17Tpe;
+
+public class Kino {
+	String name="";
+	String stadt="";
+	Saal saal;
+	
+	public Kino(String name, String stadt, Saal saal) {
+		super();
+		this.name = name;
+		this.stadt = stadt;
+		this.saal = saal;
+	}
+
+	@Override
+	public String toString() {
+		return "Kino [name=" + name + ", stadt=" + stadt + ", saal=" + saal + "]";
+	}
+	
+}

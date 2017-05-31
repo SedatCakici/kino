@@ -1,0 +1,221 @@
+package uebung4;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * @author Sedat Cakici
+ */
+public class Main {
+	static Film[] filme = new Film[14];
+	static Saal[] saele = new Saal[4];
+
+	/**
+	 * Kino,Saele und Filme werden mit Werten befuellt und in Arrays gespeichert
+	 * 
+	 * @param args
+	 * @throws illegalTimeException
+	 */
+
+	public static void main(String[] args) throws IllegalTimeException {
+		Saal blauerSaal = new Saal("Blauer Saal", 250);
+		Saal gruenerSaal = new Saal("GrÃ¼ner Saal", 200);
+		Saal studio = new Saal("Studio", 150);
+		Saal kellerloch = new Saal("Kellerloch", 30);
+
+		filme[0] = new Film("Jack Reacher: Kein Weg zurÃ¼ck", "118", Alterbeschrankung.AB_16, new Zeit("14:30"), blauerSaal);
+		filme[1] = new Film("Jack Reacher: Kein Weg zurÃ¼ck", "118", Alterbeschrankung.AB_16, new Zeit("17:00"), blauerSaal);
+		filme[2] = new Film("Jack Reacher: Kein Weg zurÃ¼ck", "118", Alterbeschrankung.AB_16, new Zeit("19:30"), blauerSaal);
+		filme[3] = new Film("Jack Reacher: Kein Weg zurÃ¼ck", "118", Alterbeschrankung.AB_16, new Zeit("22:00"), blauerSaal);
+
+		filme[4] = new Film("Tschick", "93", Alterbeschrankung.AB_12, new Zeit("15:00"), gruenerSaal);
+		filme[5] = new Film("Doctor Strange", "115", Alterbeschrankung.AB_12, new Zeit("17:00"), gruenerSaal);
+		filme[6] = new Film("Doctor Strange", "115", Alterbeschrankung.AB_12, new Zeit("19:30"), gruenerSaal);
+		filme[7] = new Film("Before I Wake", "96", Alterbeschrankung.AB_16, new Zeit("22:00"), gruenerSaal);
+
+		filme[8] = new Film("Adam Misin!", "91", Alterbeschrankung.AB_6, new Zeit("15:00"), studio);
+		filme[9] = new Film("Arrival", "116", Alterbeschrankung.AB_12, new Zeit("17:00"), studio);
+		filme[10] = new Film("Dirty Cops: War On Everyone", "98", Alterbeschrankung.AB_6, new Zeit("19:30"), studio);
+		filme[11] = new Film("Die Mitte der Welt", "115", Alterbeschrankung.AB_12, new Zeit("14:30"), studio);
+
+		filme[12] = new Film("Caf Ì�e Society", "96", Alterbeschrankung.AB_0, new Zeit("20:00"), kellerloch);
+		filme[13] = new Film("German Angst", "107", Alterbeschrankung.AB_18, new Zeit("22:00"), kellerloch);
+
+		ArrayList<Film> blauerSaalList = new ArrayList<Film>();
+		blauerSaalList.add(filme[0]);
+		blauerSaalList.add(filme[1]);
+		blauerSaalList.add(filme[2]);
+		blauerSaalList.add(filme[3]);
+
+		ArrayList<Film> gruenerSaalList = new ArrayList<Film>();
+		gruenerSaalList.add(filme[4]);
+		gruenerSaalList.add(filme[5]);
+		gruenerSaalList.add(filme[6]);
+		gruenerSaalList.add(filme[7]);
+
+		ArrayList<Film> studioList = new ArrayList<Film>();
+		studioList.add(filme[8]);
+		studioList.add(filme[9]);
+		studioList.add(filme[10]);
+		studioList.add(filme[11]);
+
+		ArrayList<Film> kellerlochList = new ArrayList<Film>();
+		kellerlochList.add(filme[12]);
+		kellerlochList.add(filme[13]);
+
+		Map<Saal, ArrayList> karteSaal = new HashMap<Saal, ArrayList>();
+
+		karteSaal.put(blauerSaal, blauerSaalList);
+		karteSaal.put(gruenerSaal, gruenerSaalList);
+		karteSaal.put(studio, studioList);
+		karteSaal.put(kellerloch, kellerlochList);
+
+		Kino cinemaxx = new Kino("Cinemaxx ", " Mannheim", saele);
+
+		saele[0] = blauerSaal;
+		saele[1] = gruenerSaal;
+		saele[2] = studio;
+		saele[3] = kellerloch;
+
+		cinemaxx.gesamtesProgramm();
+		System.out.println();
+		getAlleFilmeMitZeiten();
+		System.out.println();
+		getAlleFilme(Sortieren.Name);
+		System.out.println();
+		getAlleFilme(Sortieren.Laufzeit);
+		System.out.println();
+		getAlleFilme(Sortieren.Altersfreigabe);
+		System.out.println();
+		getFilmeFuerSaalMitZeiten(gruenerSaal);
+
+	}
+
+	/**
+	 * Gibt alle Filme nach Startzeit sortiert aus
+	 */
+	private static void getAlleFilmeMitZeiten() {
+		Comparator<Film> startzeit = new Film.FilmStartzeit();
+		Arrays.sort(filme, startzeit);
+		System.out.println("Nach Startzeit sortiert:");
+		for (int i = 0; i < filme.length; i++) {
+			System.out.println(filme[i].toString());
+		}
+		System.out.println();
+	}
+
+	/**
+	 * Gibt alle Filme eines bestimmten Saals aus
+	 * 
+	 * @param k
+	 *            =gewuenschter Saal
+	 */
+	public static void getFilmeFuerSaalMitZeiten(Saal k) {
+		int zaehler1 = 0;
+		for (int j = 0; j < filme.length; j++) {
+			if (filme[j].getSaal().equals(k.getName())) {
+				zaehler1++;
+			}
+		}
+		Film[] tmp = new Film[zaehler1];
+		int zaehler2 = 0;
+		for(int i = 0; i< filme.length; i++){
+			if(filme[i].getSaal().equals(k.getName())){
+				tmp[zaehler2] = filme[i];
+				zaehler2++;
+			}
+		}
+		
+		Comparator<Film> startzeit = new Film.FilmStartzeit();
+		Arrays.sort(filme, startzeit);
+		System.out.println("Saal" + "" + k.getName() + "'" + "(" + k.getAnzahlPlaetze() + "Plaetze"+")");
+		for (int i = 0; i < tmp.length; i++) {
+			System.out.println(tmp[i].toString());
+		}
+	}
+
+	/**
+	 * Gibt alle Filme nach Namen sortiert aus
+	 */
+//	private static void getAlleFilme() {
+//		getAlleFilme(Sortieren.Name);
+//	}
+
+	/**
+	 * Gibt alle Filme sortiert aus Der Anwender kann sich entscheiden ob nach
+	 * Name,Altersfreigabe oder Laufzeit
+	 * 
+	 * @param s
+	 */
+	private static void getAlleFilme(Sortieren s) {
+		int zaehler = 0;
+		Film[] einzelneFilme = new Film[0];
+		for (int i = 0; i < filme.length; i++) {
+			if (filmnamenDoppeltPruefen(filme[i].getName(), einzelneFilme)) {
+				einzelneFilme = arrayAnpassen(einzelneFilme);
+				einzelneFilme[zaehler] = filme[i];
+				zaehler++;
+			}
+		}
+		switch (s) {
+		case Name:
+		default:
+			Comparator<Film> name = new Film.FilmName();
+			Arrays.sort(einzelneFilme, name);
+			System.out.println("Nach Titel sortiert:");
+			break;
+		case Altersfreigabe:
+			Comparator<Film> altersfreigabe = new Film.FilmRating();
+			Arrays.sort(einzelneFilme, altersfreigabe);
+			System.out.println("Nach Altersfreigabe sortiert:");
+			break;
+		case Laufzeit:
+			Comparator<Film> laufzeit = new Film.FilmLaufzeit();
+			Arrays.sort(einzelneFilme, laufzeit);
+			System.out.println("Nach Laufzeit sortiert:");
+			break;
+		}
+		for (int i = 0; i < einzelneFilme.length; i++) {
+			System.out.println(einzelneFilme[i].ohneUhrzeit());
+		}
+	}
+
+	/**
+	 * Passt die groesse des Arrays an, falls ein neuer Film hinzugefÃ¼gt wird
+	 * 
+	 * @param altesArray
+	 *            = Altes Filmearray
+	 * @return Neues Filmearray mit angepasster Groesse
+	 */
+	public static Film[] arrayAnpassen(Film[] altesArray) {
+		Film[] neuesArray = new Film[altesArray.length + 1];
+		for (int i = 0; i < altesArray.length; i++) {
+			neuesArray[i] = altesArray[i];
+		}
+		return neuesArray;
+	}
+
+	/**
+	 * Methode die ueberprueft ob zwei Filme in einem Array den selben Namen
+	 * haben
+	 * 
+	 * @param namen
+	 *            = Name des Films
+	 * @param filme
+	 *            = Filmearray
+	 * @return false
+	 * @return true
+	 */
+	public static boolean filmnamenDoppeltPruefen(String namen, Film[] filme) {
+		for (int i = 0; i < filme.length; i++) {
+			if (namen.equals(filme[i].getName())) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+}

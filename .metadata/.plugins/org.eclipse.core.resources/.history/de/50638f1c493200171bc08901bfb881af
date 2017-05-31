@@ -1,9 +1,0 @@
-package deHsMannheimSS17Tpe;
-
-public class RobotFactory {
-	Scanner s = new Scanner(System.in);
-	RobotType robotType = s.next();
-	public void whatIsIt(){
-		
-	}
-}

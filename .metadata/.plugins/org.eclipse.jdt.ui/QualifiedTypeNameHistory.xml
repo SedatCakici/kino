@@ -14,8 +14,6 @@
 <fullyQualifiedTypeName name="deHsMannheimSS17Tpe.SimpleControl"/>
 <fullyQualifiedTypeName name="deHsMannheimSS17Tpe.SimpleInstructions"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="deHsMannheimSS17Tpe.Robot"/>
 <fullyQualifiedTypeName name="deHsMannheimSS17Tpe.RobotFactory"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
@@ -23,4 +21,9 @@
 <fullyQualifiedTypeName name="java.lang.StackTraceElement"/>
 <fullyQualifiedTypeName name="deHsMannheimSS17Tpe.RobotMacigValueException"/>
 <fullyQualifiedTypeName name="deHsMannheimSS17Tpe.RobotType"/>
+<fullyQualifiedTypeName name="deHsMannheimSS17Tpe.Film"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="deHsMannheimSS17Tpe.IllegalTimeException"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,29 @@
+package deHsMannheimSS17Tpe;
+
+public class Film {
+	String title = "";
+	int laufzeit;
+	Altersbeschränkung alter;
+	Saal saal;
+	Zeit zeit;
+
+	public Film(String title, int laufzeit, Altersbeschränkung alter, Saal saal ) {
+		this.title = title;
+		this.laufzeit = laufzeit;
+		this.alter = alter;
+		this.saal = saal;
+	}
+	
+	public void getAlleFilmeMitZeiten(){
+		
+	}
+	
+	public void getFilmeFuerSaalMitZeiten(){
+		
+	}
+	
+	public void getAlleFilme(){
+		
+	}
+
+}

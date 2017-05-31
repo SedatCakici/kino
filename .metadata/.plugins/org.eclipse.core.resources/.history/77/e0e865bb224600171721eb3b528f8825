@@ -1,0 +1,49 @@
+package uebung4;
+
+/**
+ * @author Sedat Cakici
+ */
+public enum Alterbeschrankung {
+	AB_0("[Ohne Altersbeschraenkung]"), AB_6("[Ab 6 Jahren]"), AB_12("[Ab 12 Jahren]"), AB_16("[Ab 16 Jahren]"), AB_18(
+			"[Ohne Jugendfreigabe]");
+
+	private String freigabe;
+
+	/**
+	 * Konstruktor der Enum
+	 * 
+	 * @param freigabe
+	 *            = Altersfreigabe
+	 */
+
+	private Alterbeschrankung(String freigabe) {
+		this.setAlterbeschrankung(freigabe);
+	}
+
+	/**
+	 * Getter-Methode fuer die Altersfreigabe
+	 * 
+	 * @return
+	 */
+	public String getAlterbeschrankung() {
+		return freigabe;
+	}
+
+	/**
+	 * Setter-Methode fuer die Altersfreigabe
+	 * 
+	 * @param freigabe
+	 *            = Angepasste Altersfreigabe
+	 */
+	private void setAlterbeschrankung(String freigabe) {
+		this.freigabe = freigabe;
+	}
+
+	/**
+	 * toString-Methode um die Altersfreigabe in String zu casten
+	 */
+	public String toString() {
+		return this.freigabe;
+	}
+
+}
